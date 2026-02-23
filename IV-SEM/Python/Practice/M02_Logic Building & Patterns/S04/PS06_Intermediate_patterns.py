@@ -45,15 +45,73 @@ for i in range(1,n+1):
 inverted pyramid
 #n = 4
 #output:
-
 * * * * 
  * * * 
   * * 
    * 
-'''
+
 n = int(input())
 for i in range(1,n+1):
     print(" "*(i-1)+"* "*(n-i+1))
+#or
+n = int(input())
+for i in range(n,0,-1):
+    print(" "*(n-i)+"* "*i)
+
+n = int(input())
+for i in range(1,n+1):
+    print((n-i)*" "+i*"* ")
+for i in range(n-1,0,-1):
+    print(" "*(n-i)+"* "*i)
+#output:
+#    * 
+#   * * 
+#  * * * 
+# * * * * 
+#  * * * 
+#   * * 
+#    * 
+
+n = int(input())
+for i in range(1,n+1):
+    print(" "*(n-i)+" ".join([str(j) for j in range(1,i+1)]))
+# output:
+#    1
+#   1 2
+#  1 2 3
+# 1 2 3 4
+
+n = int(input())
+for i in range(1,n+1):
+    print(" "*(n-i)+" ".join([str(i) for j in range(1,i+1)]))
+# output:
+#    1
+#   2 2
+#  3 3 3
+# 4 4 4 4
+
+n = int(input())
+for i in range(1,n+1):
+    print(" "*(n-i)+" ".join([chr(64+j) for j in range(1,i+1)]))
+# output:
+#    A
+#   A B
+#  A B C
+# A B C D
+
+n = int(input())
+val = 65
+for i in range(n):
+    for j in range(i+1):
+        print(chr(val),end=" ")
+        val+=1
+    print()
+# output:4
+# A 
+# B C 
+# D E F 
+# G H I J 
+'''
 
 
 
